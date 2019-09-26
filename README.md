@@ -13,7 +13,7 @@ My HASS config looks as follows:
 ### configuration.yaml
 ```
 shell_command:
-say_stuff: 'curl -G http://192.168.0.74:8069/say/ --data-urlencode "saywhat={{ speech_text }}"'
+say_stuff: 'curl -G http://box_this_is_running_on:8069/say/ --data-urlencode "saywhat={{ speech_text }}"'
 ```
 
 ### old_automations.yaml
