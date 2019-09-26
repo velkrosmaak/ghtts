@@ -10,18 +10,16 @@ Since this is just a URL you can call, you can use this wherever that's possible
 
 My HASS config looks as follows:
 
-> configuration.yaml
+## configuration.yaml
+>shell_command:
+>    say_stuff: 'curl -G http://192.168.0.74:8069/say/ --data-urlencode "saywhat={{ speech_text }}"'
 
-shell_command:
-    say_stuff: 'curl -G http://192.168.0.74:8069/say/ --data-urlencode "saywhat={{ speech_text }}"'
 
-
-> old_automations.yaml
-
-- service: shell_command.say_stuff
-  data_template:
-      speech_text: "It is {{states('sensor.living_room_temperature')}} degrees in the living room."
+##old_automations.yaml
+>- service: shell_command.say_stuff
+>  data_template:
+>      speech_text: "It is {{states('sensor.living_room_temperature')}} degrees in the living room."
 
 This can then be invoked like so:
 
-curl -G http://localhost:8069/say/ --data-urlencode "saywhat=Lou Reed is great!"
+>curl -G http://localhost:8069/say/ --data-urlencode "saywhat=Lou Reed is great!"
