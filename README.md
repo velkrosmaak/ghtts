@@ -25,5 +25,6 @@ say_stuff: 'curl -G http://192.168.0.74:8069/say/ --data-urlencode "saywhat={{ s
 
 This can then be invoked like so:
 
-```curl -G http://localhost:8069/say/ --data-urlencode "saywhat=Lou Reed is great!"
+```
+curl -G http://localhost:8069/say/ --data-urlencode "saywhat=Lou Reed is great!"
 ```
